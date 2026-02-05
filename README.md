@@ -28,16 +28,26 @@ Summarising PadCare’s work in clear, concise bullet points
 
 **How It Works**
 
-The system reads the text in data/raw.txt (publicly available information about PadCare).
+**Text Source**
+All information comes from data/raw.txt, which contains publicly available details about PadCare Labs. No private or paid data is used.
 
-It splits the text into small chunks and creates embeddings using a sentence transformer.
+**Chunking & Embeddings**
+The text is split into smaller chunks to make it easier to search. Each chunk is converted into a vector embedding using all-MiniLM-L6-v2, which helps the system understand the meaning of each chunk.
 
-A FAISS vector index is built to quickly find relevant chunks for any question.
+**FAISS Vector Search**
+A FAISS index is built from the embeddings. When you ask a question, the system quickly finds the most relevant chunks from the index.
 
-A language model (Flan-T5) generates answers based only on these chunks.
+**Answer Generation**
+The system uses GPT-2, a causal language model, to generate natural, readable answers based strictly on the retrieved chunks. This ensures responses are factual, clear, and human-friendly.
 
-The app can be used locally or through Streamlit for a friendly Q&A interface.
-The application processes each query using keyword-driven prompt logic to identify relevant context. Based on this, it generates a clear and structured response drawn strictly from the stored knowledge. Safeguards are built in to ensure the outputs remain factual, controlled, and free from assumptions or hallucinated information.
+**Interactive Q&A**
+You can run the system locally or use the Streamlit app to type questions and receive answers instantly. It’s designed to be approachable, professional, and easy to use
+
+
+
+**Key Features**
+
+I ensure the assistant provides clear, human-readable answers in complete sentences. It avoids unnecessary repetition and is capable of handling simple questions, summaries, and generating basic posts or pitches. All responses are strictly grounded in carefully curated information.
 
 
 **Tech Stack**
@@ -50,10 +60,18 @@ Prompt-driven AI logic (no paid APIs)
 
 **Data Sources**
 
-**data/raw.txt** containing publicly available information about PadCare Labs.
+**data/raw.txt** containing publicly available information about PadCare Labs. (All information comes from the data/raw.txt file in this project.)
 
 No private or paid data is used.
 I do not use any private or paid data sources.
+
+**Side Note**: The raw.txt file contains all the information about PadCare Labs that our system uses to answer questions. By storing the content in a single text file:
+
+Centralised Knowledge – All relevant data is in one place, making it easier to update or expand.
+
+Controlled Outputs – The language model only generates answers based on this file, preventing misinformation or hallucinations.
+
+Simple & Transparent – Anyone can see exactly what the system knows, ensuring clarity and reproducibility
 
 
 **Improvements with more time**
@@ -65,3 +83,5 @@ Improve answer creativity and fluency.
 Build a hosted demo online for easy access.
 
 Add summarisation, bullet points, and LinkedIn pitch features for different types of outputs.
+
+Add multilingual support
