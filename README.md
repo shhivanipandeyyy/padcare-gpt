@@ -91,4 +91,6 @@ Add multilingual support
 
 **Try It Yourself on Google Colab**
 
-I’ve made a live Colab demo so you can explore PadCare GPT without installing anything. This notebook runs the full pipeline: it reads the raw text, creates embeddings, searches with FAISS, and generates answers with the language model. I put the Padcare_GPT_Assignment html
+I’ve made a live Colab demo so you can explore PadCare GPT without installing anything. This notebook runs the full pipeline: it reads the raw text, creates embeddings, searches with FAISS, and generates answers with the language model.
+
+https://colab.research.google.com/drive/1N9uz1WXBDEKyadnEte8nvV6grSMpNZHX?usp=sharing This is link, You can check.
