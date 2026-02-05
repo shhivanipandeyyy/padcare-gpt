@@ -27,14 +27,21 @@ Summarising PadCare’s work in clear, concise bullet points
 
 How It Works
 
-I curate and maintain publicly available information about PadCare in a structured, text-based knowledge file. Users interact with the system through a simple Streamlit interface, where they can submit their questions.
+The system reads the text in data/raw.txt (publicly available information about PadCare).
 
+It splits the text into small chunks and creates embeddings using a sentence transformer.
+
+A FAISS vector index is built to quickly find relevant chunks for any question.
+
+A language model (Flan-T5) generates answers based only on these chunks.
+
+The app can be used locally or through Streamlit for a friendly Q&A interface.
 The application processes each query using keyword-driven prompt logic to identify relevant context. Based on this, it generates a clear and structured response drawn strictly from the stored knowledge. Safeguards are built in to ensure the outputs remain factual, controlled, and free from assumptions or hallucinated information.
 
 
 Tech Stack
 
-Python
+Python (google Collab)
 Streamlit (for UI)
 Text-based Knowledge Store
 Prompt-driven AI logic (no paid APIs)
@@ -42,5 +49,18 @@ Prompt-driven AI logic (no paid APIs)
 
 Data Sources
 
-I curate information from publicly accessible sources such as PadCare Labs’ website, public reports, and verified online content. The system is designed to use only this curated material to ensure accuracy and transparency.
+data/raw.txt containing publicly available information about PadCare Labs.
+
+No private or paid data is used.
 I do not use any private or paid data sources.
+
+
+Improvements with more time
+
+Add more sources to make answers richer.
+
+Improve answer creativity and fluency.
+
+Build a hosted demo online for easy access.
+
+Add summarisation, bullet points, and LinkedIn pitch features for different types of outputs.
