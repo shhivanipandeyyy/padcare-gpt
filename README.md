@@ -1,2 +1,1 @@
-# padcare-gpt
-PadCare GPT Project Assignment
+PadCare GPT is a lightweight AI assistant that answers questions about PadCare Labs using publicly available information. It supports internal teams by providing quick insights into PadCare’s mission, processes, and impact.
