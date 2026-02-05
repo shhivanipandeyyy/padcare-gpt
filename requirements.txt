@@ -1,0 +1,6 @@
+streamlit==1.30.0
+transformers==4.35.0
+sentence-transformers==2.2.2
+faiss-cpu==1.7.4
+torch==2.1.0
+pickle5==0.0.12
