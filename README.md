@@ -85,3 +85,10 @@ Build a hosted demo online for easy access.
 Add summarisation, bullet points, and LinkedIn pitch features for different types of outputs.
 
 Add multilingual support
+
+
+
+
+**Try It Yourself on Google Colab**
+
+I’ve made a live Colab demo so you can explore PadCare GPT without installing anything. This notebook runs the full pipeline: it reads the raw text, creates embeddings, searches with FAISS, and generates answers with the language model. I put the Padcare_GPT_Assignment html
